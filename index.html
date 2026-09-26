@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ EDIT: your name + a short tagline (shows in the browser tab & Google) -->
+  <title>Aditi Sharma · Portfolio</title>
+  <meta name="description" content="Aditi Sharma — Engineering student & web developer. Projects, skills and contact." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- background layers -->
+  <div class="bg-aurora" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">
+      <!-- ✏️ EDIT: your initials -->
+      <span>AS</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <!-- ✏️ EDIT: availability status (or delete this line) -->
+        <span class="status-badge"><i class="ping"></i> Available for internships</span>
+
+        <p class="eyebrow">Hello, I'm</p>
+        <!-- ✏️ EDIT: your full name (last word gets the gradient) -->
+        <h1 class="hero-name">Aditi <span class="gradient-text">Sharma</span></h1>
+        <!-- ✏️ EDIT: role. The rotating words live in script.js -->
+        <h2 class="hero-role">A <span class="rotate" id="rotate">Web Developer</span></h2>
+        <!-- ✏️ EDIT: one or two lines about yourself -->
+        <p class="hero-bio">
+          Final-year Computer Science student who turns ideas into clean, fast
+          websites. Currently diving into full-stack development and open source.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">View my work <span aria-hidden="true">→</span></a>
+          <!-- ✏️ EDIT: put resume.pdf in this folder -->
+          <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+        </div>
+        <!-- ✏️ EDIT: your social links (delete any you don't use) -->
+        <div class="socials">
+          <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:you@email.com">Email</a>
+        </div>
+      </div>
+
+      <!-- floating profile card -->
+      <aside class="profile-card" id="tilt">
+        <div class="pc-glow" aria-hidden="true"></div>
+        <div class="pc-top">
+          <!-- ✏️ EDIT: swap for a photo → <img src="photo.jpg" alt="Your name"/> -->
+          <div class="pc-avatar">AS</div>
+          <span class="pc-live"><i></i> online</span>
+        </div>
+        <!-- ✏️ EDIT: name + handle -->
+        <h3 class="pc-name">Aditi Sharma</h3>
+        <p class="pc-handle">@aditi.codes</p>
+        <div class="pc-stats">
+          <!-- ✏️ EDIT: your numbers. data-count = final value -->
+          <div><b data-count="12">0</b><span>Projects</span></div>
+          <div><b data-count="8" data-suffix=".7">0</b><span>CGPA</span></div>
+          <div><b data-count="3" data-suffix="+">0</b><span>Years</span></div>
+        </div>
+        <div class="pc-stack">
+          <span>⚛️ React</span><span>🟢 Node</span><span>🐍 Python</span>
+        </div>
+      </aside>
+    </div>
+
+    <!-- scrolling tech strip -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <!-- ✏️ EDIT: your tech (it repeats automatically) -->
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Python</span><span>Git</span><span>Figma</span><span>Tailwind</span><span>MongoDB</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Python</span><span>Git</span><span>Figma</span><span>Tailwind</span><span>MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-photo">
+        <div class="avatar">AS</div>
+      </div>
+      <div class="about-text">
+        <p class="tag"><span class="tag-num">01</span> About me</p>
+        <h3 class="section-title">Nice to meet you</h3>
+        <!-- ✏️ EDIT: 2–3 short paragraphs -->
+        <p>
+          I'm an engineering student passionate about building for the web. I love
+          the whole journey — from a blank file to a live site people actually use.
+        </p>
+        <p>
+          Off-screen you'll find me contributing to open source, sketching UI ideas,
+          or learning something new on the side.
+        </p>
+        <div class="facts">
+          <!-- ✏️ EDIT -->
+          <div class="fact"><b>📍 Location</b><span>Bengaluru, India</span></div>
+          <div class="fact"><b>🎓 Degree</b><span>B.Tech, CSE</span></div>
+          <div class="fact"><b>💼 Status</b><span>Open to internships</span></div>
+          <div class="fact"><b>🌐 Languages</b><span>English, Hindi</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICES / WHAT I DO ══════════════ -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="tag center"><span class="tag-num">02</span> What I can do for you</p>
+      <h3 class="section-title center">Services</h3>
+      <div class="services-grid">
+        <!-- ✏️ EDIT these cards -->
+        <div class="service">
+          <div class="service-icon">🎨</div>
+          <h4>Web Design</h4>
+          <p>Clean, modern, responsive interfaces that feel great on any device.</p>
+        </div>
+        <div class="service">
+          <div class="service-icon">⚙️</div>
+          <h4>Development</h4>
+          <p>Hand-coded HTML, CSS &amp; JavaScript — fast, accessible and SEO-friendly.</p>
+        </div>
+        <div class="service">
+          <div class="service-icon">🚀</div>
+          <h4>Deployment</h4>
+          <p>Ship it live with Git &amp; GitHub Pages, then keep it updated with one push.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SKILLS ══════════════ -->
+  <section class="section alt" id="skills">
+    <div class="container">
+      <p class="tag center"><span class="tag-num">03</span> What I work with</p>
+      <h3 class="section-title center">Skills &amp; Tools</h3>
+      <div class="skills-grid">
+        <!-- ✏️ EDIT chips freely -->
+        <div class="skill-group">
+          <h4>💻 Languages</h4>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>C++</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>🧩 Frameworks</h4>
+          <div class="chips"><span>React</span><span>Node.js</span><span>Tailwind</span><span>Bootstrap</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>🛠️ Tools</h4>
+          <div class="chips"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Figma</span><span>Linux</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROJECTS ══════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="tag center"><span class="tag-num">04</span> Some things I've built</p>
+      <h3 class="section-title center">Projects</h3>
+      <div class="projects-grid">
+
+        <!-- ✏️ EDIT: copy a whole <article> to add more projects -->
+        <article class="project">
+          <div class="project-top">
+            <span class="project-icon">🛒</span>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" title="Live demo">↗</a>
+              <a href="#" target="_blank" rel="noopener" title="Source code">&lt;/&gt;</a>
+            </div>
+          </div>
+          <h4>Shopping Cart App</h4>
+          <p>A responsive e-commerce cart with add/remove, quantity and live totals.</p>
+          <div class="chips small"><span>React</span><span>CSS</span></div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <span class="project-icon">🌦️</span>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" title="Live demo">↗</a>
+              <a href="#" target="_blank" rel="noopener" title="Source code">&lt;/&gt;</a>
+            </div>
+          </div>
+          <h4>Weather Dashboard</h4>
+          <p>Search any city and see live weather pulled from a public API.</p>
+          <div class="chips small"><span>JavaScript</span><span>API</span></div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <span class="project-icon">📝</span>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener" title="Live demo">↗</a>
+              <a href="#" target="_blank" rel="noopener" title="Source code">&lt;/&gt;</a>
+            </div>
+          </div>
+          <h4>Task Manager</h4>
+          <p>A clean to-do app with categories and local-storage persistence.</p>
+          <div class="chips small"><span>HTML</span><span>JS</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ JOURNEY / TIMELINE ══════════════ -->
+  <section class="section alt" id="journey">
+    <div class="container">
+      <p class="tag center"><span class="tag-num">05</span> My path so far</p>
+      <h3 class="section-title center">Education &amp; Experience</h3>
+      <div class="timeline">
+        <!-- ✏️ EDIT: newest first -->
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-date">2022 — 2026</span>
+          <h4>B.Tech in Computer Science</h4>
+          <p>ABC Institute of Technology · CGPA 8.7</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-date">Summer 2025</span>
+          <h4>Web Development Intern</h4>
+          <p>Built and shipped landing pages for a startup using React.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <span class="tl-date">2024</span>
+          <h4>Hackathon Finalist</h4>
+          <p>Top 10 of 200 teams — built an accessibility tool in 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="contact-card">
+        <p class="tag center"><span class="tag-num">06</span> Let's talk</p>
+        <h3 class="section-title center">Get in touch</h3>
+        <p class="center muted">Have an opportunity or just want to say hi? Drop a message below.</p>
+
+        <!-- ✏️ EDIT: make this form work in 30 seconds —
+             1. go to https://formspree.io  (free), create a form
+             2. paste your form URL into action="" below
+             Until you do, submitting just opens the visitor's email app. -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/your-id" method="POST">
+          <div class="field-row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+          <textarea name="message" rows="4" placeholder="Your message…" required></textarea>
+          <button type="submit" class="btn btn-primary big">Send message →</button>
+          <p class="form-status" id="formStatus" hidden></p>
+        </form>
+
+        <!-- ✏️ EDIT: your email -->
+        <p class="center muted small">Prefer email? <a class="inline-link" href="mailto:you@email.com">you@email.com</a></p>
+        <div class="socials center">
+          <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/your-username" target="_blank" rel="noopener">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <!-- ✏️ EDIT: your name -->
+    <p>Built with 💜 by Aditi Sharma · <span id="year"></span></p>
+    <p class="muted small">Made with HTML, CSS &amp; JavaScript · Hosted on GitHub Pages</p>
+  </footer>
+
+  <!-- back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
